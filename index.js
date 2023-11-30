@@ -33,6 +33,11 @@ app.post('/lock/lock', (req, res) => {
   res.json({ success: true, isLocked });
 });
 
+app.post('/fingerprint', (req, res) => {
+  // Assuming a successful fingerprint authentication
+  isLocked = false;
+  res.json({ success: true, isLocked });
+});
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
