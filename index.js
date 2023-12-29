@@ -28,6 +28,10 @@ app.post('/lock/unlock', (req, res) => {
   }
 });
 
+app.get('/lock/unlock2', (req, res) => {
+  isLocked = false;
+  res.json({ success: true, isLocked });
+})
 app.post('/lock/lock', (req, res) => {
   isLocked = true;
   res.json({ success: true, isLocked });
